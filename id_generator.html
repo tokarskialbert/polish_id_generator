@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html lang="PL">
+
+<head>
+	<meta charset="utf-8" />
+	<script type="text/javascript" src="id_generator.js"></script>
+</head>
+
+<body>
+	<form>
+		<p><em><small>©Albert Tokarski</small></em></p>
+		<p><em>1. Istnieje możliwość otrzymania dowodu osobistego przed osiągnięciem pełnoletniości, nawet zaraz po urodzeniu.</em></p>
+		<p><em>2. Ze względu na brak możliwości uwzględnienia daty urodzenia przy generowaniu numeru, użytkownik może wybrać okres czasu, w którym obowiązywały konkretne serie dowodów osobistych.</em></p>
+		<p><em>3. Przed wyczerpaniem puli serii A, w marcu 2015 wprowadzono dowody serii C. W marcu 2019 wprowadzono dowody serii D.</em></p>
+		<p><em>4. Poprawność wygenerowanego numeru dowodu osobistego sprawdzić można na przykład tu:</em> <a href="https://www.czerwona-skarbonka.pl/walidator-danych-walidacja-pesel-regon-nip-krok-po-kroku/">Walidator Numeru Dowodu Osobistego</a> </p>
+  		<p><strong><big>Wybierz preferowaną wersję dowodu osobistego:</big></strong></p>
+  		<div>
+    	<input type="radio" id="id_version_0"
+    	name="id_version" value="random" onclick="setIdVersion('id_version_0')" checked>
+   		<label for="id_version_0">dowolna seria</label>
+  
+    	<input type="radio" id="id_version_1"
+     	name="id_version" value="id_version_1" onclick="setIdVersion('id_version_1')">
+    	<label for="id_version_1">do 03.2015</label>
+
+    	<input type="radio" id="id_version_2"
+     	name="id_version" value="id_version_2" onclick="setIdVersion('id_version_2')">
+    	<label for="id_version_2">od 03.2015 do 03.2019</label>
+
+    	<input type="radio" id="id_version_3"
+     	name="id_version" value="id_version_3" onclick="setIdVersion('id_version_3')">
+    	<label for="id_version_3">od 03.2019</label>
+		</div>
+	</form>
+	<p></p>
+	<input type="submit" id="wygeneruj" value="WYGENERUJ" onclick="onclickGenerateId()" />
+	<p></p>
+	<div id="wynik"></div>
+</body>
+
+</html>
